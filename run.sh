@@ -30,13 +30,12 @@ if [[ ":$PATH:" != *":$PYBIN:"* ]]; then
     echo "В PATH добавоена папка $PATH:$PYBIN"
 fi
 
-echo $PATH
-
 if ! command -v pproxy &> /dev/null; then
     echo "Устанавливаем pproxy"
     pip3 install pproxy
 fi
 
 echo "Запускаем SOCKS5 прокси"
-pproxy -l socks5://USER:PASS@:8080 -v
+PPROXY_BIN="$HOME/Library/Python/3.9/bin/pproxy"
+"$PPROXY_BIN" -l socks5://USER:PASS@:8080 -v
 
