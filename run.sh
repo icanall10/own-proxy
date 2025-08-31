@@ -29,7 +29,7 @@ if ! command -v pproxy &> /dev/null; then
 fi
 
 
-CONFIG_FILE="$HOME/.config"
+CONFIG_FILE="./.config"
 
 # Если конфиг существует, считываем данные
 if [ -f "$CONFIG_FILE" ]; then
