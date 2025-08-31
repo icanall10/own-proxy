@@ -23,7 +23,18 @@ if ! command -v python3 &> /dev/null; then
     brew install python
 fi
 
-pip3 install pproxy
+current_path=$(pwd)
+
+if [[ $current_path == /Users/* ]]; then
+    new_path="$current_path/Library/Python/3.9/bin"
+    export PATH="$PATH:$new_path"
+    echo "Добавили путь в PATH"
+fi
+
+if ! command -v pproxy &> /dev/null; then
+    echo "Устанавливаем pproxy"
+    pip3 install pproxy
+fi
 
 echo "Запускаем SOCKS5 прокси"
 pproxy -l socks5://USER:PASS@:8080 -v
