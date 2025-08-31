@@ -16,6 +16,7 @@ if ! command -v git &> /dev/null; then
     brew install git
 fi
 
+
 git reset --hard
 
 if git pull | grep -q "Already up to date."; then
