@@ -16,8 +16,6 @@ if ! command -v git &> /dev/null; then
     brew install git
 fi
 
-git reset --hard && git pull
-
 if ! command -v python3 &> /dev/null; then
     echo "Устанавливаем python3"
     brew install python
