@@ -38,8 +38,9 @@ if ! command -v pproxy &> /dev/null; then
 fi
 
 
+VERSION=2
 echo
-echo -e "\033[90m Версия: \033[0m \033[34m 2 \033[0m"
+echo -e "\033[90m Версия:\033[0m \033[34m$VERSION\033[0m"
 
 
 CONFIG_FILE="./.config"
