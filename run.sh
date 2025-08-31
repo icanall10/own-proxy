@@ -63,7 +63,7 @@ PASSWORD="$PASSWORD"
 EOL
 
 
-IP=$(curl -s https://ifconfig.me)
+IP=$(curl -4 -s https://ifconfig.me)
 
 echo ""
 echo -e "\033[90m ip:\033[0m \033[32m$IP\033[0m"
