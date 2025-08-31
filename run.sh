@@ -16,8 +16,16 @@ if ! command -v git &> /dev/null; then
     brew install git
 fi
 
-git reset --hard && git pull
-source "$0" "$@"
+
+git reset --hard
+
+if git pull | grep -q "Already up to date."; then
+    echo "Нет изменений в репозитории"
+else
+    echo "Репозиторий обновлён, перезагружаем скрипт"
+    source "$0" "$@"
+fi
+
 
 if ! command -v python3 &> /dev/null; then
     echo "Устанавливаем python3"
