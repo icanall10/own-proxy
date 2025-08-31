@@ -17,6 +17,7 @@ if ! command -v git &> /dev/null; then
 fi
 
 git reset --hard && git pull
+source "$0" "$@"
 
 if ! command -v python3 &> /dev/null; then
     echo "Устанавливаем python3"
