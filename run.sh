@@ -23,19 +23,12 @@ if ! command -v python3 &> /dev/null; then
     brew install python
 fi
 
-PYBIN="$HOME/Library/Python/3.9/bin"
-
-if [[ ":$PATH:" != *":$PYBIN:"* ]]; then
-    export PATH="$PATH:$PYBIN"
-    echo "В PATH добавоена папка $PATH:$PYBIN"
-fi
-
 if ! command -v pproxy &> /dev/null; then
     echo "Устанавливаем pproxy"
     pip3 install pproxy
 fi
 
 echo "Запускаем SOCKS5 прокси"
-PPROXY_BIN="$HOME/Library/Python/3.9/bin/pproxy"
-"$PPROXY_BIN" -l socks5://USER:PASS@:8080 -v
+$PPROXY_BIN="$HOME/Library/Python/3.9/bin/pproxy"
+"$PPROXY_BIN" -l socks5://:8080#$USERNAME:$PASSWORD -v
 
