@@ -30,3 +30,4 @@ fi
 
 echo "Запускаем SOCKS5 прокси"
 pproxy -l socks5://USER:PASS@:8080 -v
+
