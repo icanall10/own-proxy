@@ -29,6 +29,5 @@ if ! command -v pproxy &> /dev/null; then
 fi
 
 echo "Запускаем SOCKS5 прокси"
-PPROXY_BIN="$HOME/Library/Python/3.9/bin/pproxy"
-"$PPROXY_BIN" -l socks5://127.0.0.1:8080#$USERNAME:$PASSWORD -v
+"$HOME/Library/Python/3.9/bin/pproxy" -l socks5://127.0.0.1:8080#$USERNAME:$PASSWORD -v
 
