@@ -30,6 +30,8 @@ if [[ ":$PATH:" != *":$PYBIN:"* ]]; then
     echo "В PATH добавоена папка $PATH:$PYBIN"
 fi
 
+echo $PATH
+
 if ! command -v pproxy &> /dev/null; then
     echo "Устанавливаем pproxy"
     pip3 install pproxy
