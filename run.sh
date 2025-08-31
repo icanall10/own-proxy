@@ -47,7 +47,7 @@ done
 
 while [ -z "$PASSWORD" ]; do
     echo
-    read -s "Введите пароль для прокси: " PASSWORD
+    read -p "Введите пароль для прокси: " PASSWORD
     echo
 done
 
