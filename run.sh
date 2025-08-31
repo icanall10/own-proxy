@@ -32,9 +32,10 @@ IP=$(curl -s https://ifconfig.me)
 PORT=8080
 USERNAME=username
 PASSWORD=password
+
 echo -e "\033[90mip:\033[0m \033[32m$IP\033[0m"
 echo -e "\033[90mport:\033[0m \033[32m$PORT\033[0m"
-echo -e "\033[90mmusername:\033[0 \033[32m$USERNAME\033[0m"
+echo -e "\033[90musername:\033[0m \033[32m$USERNAME\033[0m"
 echo -e "\033[90mpassword:\033[0m \033[32m$PASSWORD\033[0m"
 
 echo "Запускаем SOCKS5 прокси"
