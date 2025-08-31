@@ -36,22 +36,17 @@ if [ -f "$CONFIG_FILE" ]; then
     source "$CONFIG_FILE"
 fi
 
-# Если данные не заданы, спрашиваем у пользователя
-if [ -z "$PORT" ]; then
-    echo
-    read -p "Введите порт для SOCKS5: " PORT
-fi
+read -p "Введите порт для прокси [по-умолчанию 8080]: " PORT
+PORT=${PORT:-8080}
 
-if [ -z "$USERNAME" ]; then
-    echo
-    read -p "Введите имя пользователя: " USERNAME
-fi
+while [ -z "$USERNAME" ]; do
+    read -p "Введите логин для прокси: " USERNAME
+done
 
-if [ -z "$PASSWORD" ]; then
+while [ -z "$PASSWORD" ]; do
+    read -s "Введите пароль для прокси: " PASSWORD
     echo
-    read -s -p "Введите пароль: " PASSWORD
-    echo
-fi
+done
 
 # Сохраняем данные в конфиг
 cat > "$CONFIG_FILE" <<EOL
