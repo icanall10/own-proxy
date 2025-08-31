@@ -29,7 +29,13 @@ if ! command -v pproxy &> /dev/null; then
 fi
 
 IP=$(curl -s https://ifconfig.me)
-echo -e "\033[32m$IP\033[0m"
+PORT=8080
+USERNAME=username
+PASSWORD=password
+echo -e "ip: \033[32m$IP\033[0m"
+echo -e "port: \033[32m$PORT\033[0m"
+echo -e "username: \033[32m$USERNAME\033[0m"
+echo -e "password: \033[32m$PASSWORD\033[0m"
 
 echo "Запускаем SOCKS5 прокси"
 "$HOME/Library/Python/3.9/bin/pproxy" -l socks5://127.0.0.1:8080#$USERNAME:$PASSWORD -v
