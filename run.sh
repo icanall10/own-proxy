@@ -25,11 +25,7 @@ fi
 
 current_path=$(pwd)
 
-if [[ $current_path == /Users/* ]]; then
-    new_path="$current_path/Library/Python/3.9/bin"
-    export PATH="$PATH:$new_path"
-    echo "Добавили путь в PATH"
-fi
+ echo $current_path
 
 if ! command -v pproxy &> /dev/null; then
     echo "Устанавливаем pproxy"
