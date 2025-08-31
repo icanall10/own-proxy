@@ -36,14 +36,17 @@ if [ -f "$CONFIG_FILE" ]; then
     source "$CONFIG_FILE"
 fi
 
+echo
 read -p "Введите порт для прокси [по-умолчанию 8080]: " PORT
 PORT=${PORT:-8080}
 
 while [ -z "$USERNAME" ]; do
+    echo
     read -p "Введите логин для прокси: " USERNAME
 done
 
 while [ -z "$PASSWORD" ]; do
+    echo
     read -s "Введите пароль для прокси: " PASSWORD
     echo
 done
