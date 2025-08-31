@@ -38,14 +38,17 @@ fi
 
 # Если данные не заданы, спрашиваем у пользователя
 if [ -z "$PORT" ]; then
+    echo
     read -p "Введите порт для SOCKS5: " PORT
 fi
 
 if [ -z "$USERNAME" ]; then
+    echo
     read -p "Введите имя пользователя: " USERNAME
 fi
 
 if [ -z "$PASSWORD" ]; then
+    echo
     read -s -p "Введите пароль: " PASSWORD
     echo
 fi
