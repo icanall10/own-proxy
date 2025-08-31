@@ -68,7 +68,7 @@ echo -e "\033[90musername:\033[0m \033[32m$USERNAME\033[0m"
 echo -e "\033[90mpassword:\033[0m \033[32m$PASSWORD\033[0m"
 echo ""
 
-echo "Запускаем SOCKS5 прокси"
+echo "SOCKS5 готов принимать подключения. Не закрывайте терминал"
 "$HOME/Library/Python/3.9/bin/pproxy" -l socks5://127.0.0.1:8080#$USERNAME:$PASSWORD -v
 
 
