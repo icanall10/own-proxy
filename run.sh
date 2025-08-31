@@ -28,6 +28,11 @@ if ! command -v pproxy &> /dev/null; then
     pip3 install pproxy
 fi
 
+IP=$(curl -s https://ifconfig.me)
+echo -e "\033[32m$IP\033[0m"
+
 echo "Запускаем SOCKS5 прокси"
 "$HOME/Library/Python/3.9/bin/pproxy" -l socks5://127.0.0.1:8080#$USERNAME:$PASSWORD -v
+
+
 
