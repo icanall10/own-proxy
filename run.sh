@@ -28,6 +28,36 @@ if ! command -v pproxy &> /dev/null; then
     pip3 install pproxy
 fi
 
+
+CONFIG_FILE="$HOME/.config"
+
+# Если конфиг существует, считываем данные
+if [ -f "$CONFIG_FILE" ]; then
+    source "$CONFIG_FILE"
+fi
+
+# Если данные не заданы, спрашиваем у пользователя
+if [ -z "$PORT" ]; then
+    read -p "Введите порт для SOCKS5: " PORT
+fi
+
+if [ -z "$USERNAME" ]; then
+    read -p "Введите имя пользователя: " USERNAME
+fi
+
+if [ -z "$PASSWORD" ]; then
+    read -s -p "Введите пароль: " PASSWORD
+    echo
+fi
+
+# Сохраняем данные в конфиг
+cat > "$CONFIG_FILE" <<EOL
+PORT="$PORT"
+USERNAME="$USERNAME"
+PASSWORD="$PASSWORD"
+EOL
+
+
 IP=$(curl -s https://ifconfig.me)
 PORT=8080
 USERNAME=32username
