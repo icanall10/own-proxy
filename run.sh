@@ -23,10 +23,6 @@ if ! command -v python3 &> /dev/null; then
     brew install python
 fi
 
-current_path=$(pwd)
-
- echo $current_path
-
 if ! command -v pproxy &> /dev/null; then
     echo "Устанавливаем pproxy"
     pip3 install pproxy
