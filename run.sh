@@ -70,6 +70,10 @@ USERNAME="$USERNAME"
 PASSWORD="$PASSWORD"
 EOL
 
+echo
+echo -e ""
+echo -e "\033[90m Версия: \033[0m \033[34m 2 \033[0m"
+
 
 IP=$(curl -4 -s https://ifconfig.me)
 
