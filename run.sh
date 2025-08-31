@@ -38,13 +38,16 @@ if ! command -v pproxy &> /dev/null; then
 fi
 
 
+echo
+echo -e "\033[90m Версия: \033[0m \033[34m 2 \033[0m"
+
+
 CONFIG_FILE="./.config"
 
 # Если конфиг существует, считываем данные
 if [ -f "$CONFIG_FILE" ]; then
     source "$CONFIG_FILE"
 fi
-
 
 while [ -z "$PORT" ]; do
     echo
@@ -69,10 +72,6 @@ PORT="$PORT"
 USERNAME="$USERNAME"
 PASSWORD="$PASSWORD"
 EOL
-
-echo
-echo -e ""
-echo -e "\033[90m Версия: \033[0m \033[34m 2 \033[0m"
 
 
 IP=$(curl -4 -s https://ifconfig.me)
