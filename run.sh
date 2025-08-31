@@ -65,16 +65,18 @@ EOL
 
 IP=$(curl -4 -s https://ifconfig.me)
 
-echo ""
+echo
 echo -e "\033[90m ip:\033[0m \033[32m$IP\033[0m"
 echo -e "\033[90m port:\033[0m \033[32m$PORT\033[0m"
 echo -e "\033[90m username:\033[0m \033[32m$USERNAME\033[0m"
 echo -e "\033[90m password:\033[0m \033[32m$PASSWORD\033[0m"
-echo ""
+echo
 
 echo -e "\033[90m Данные для подключения в .config \033[0m"
 echo -e "\033[32m SOCKS5 готов принимать подключения. Не закрывайте терминал \033[0m"
 echo
+
+echo 'ok1'
 
 "$HOME/Library/Python/3.9/bin/pproxy" -l socks5://127.0.0.1:8080#$USERNAME:$PASSWORD -v
 
