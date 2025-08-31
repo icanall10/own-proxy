@@ -84,7 +84,7 @@ echo -e "\033[90m Данные для подключения в .config \033[0m"
 echo -e "\033[32m SOCKS5 готов принимать подключения. Не закрывайте терминал \033[0m"
 echo
 
-echo "ok1"
+echo "ok2"
 
 "$HOME/Library/Python/3.9/bin/pproxy" -l socks5://127.0.0.1:8080#$USERNAME:$PASSWORD -v
 
