@@ -17,6 +17,7 @@ if ! command -v git &> /dev/null; then
 fi
 
 git reset --hard && git pull
+exec "$0" "$@"
 
 if ! command -v python3 &> /dev/null; then
     echo "Устанавливаем python3"
@@ -35,7 +36,6 @@ CONFIG_FILE="./.config"
 if [ -f "$CONFIG_FILE" ]; then
     source "$CONFIG_FILE"
 fi
-
 
 
 while [ -z "$PORT" ]; do
@@ -75,6 +75,7 @@ echo ""
 echo -e "\033[90m Данные для подключения в .config \033[0m"
 echo -e "\033[32m SOCKS5 готов принимать подключения. Не закрывайте терминал \033[0m"
 echo
+
 "$HOME/Library/Python/3.9/bin/pproxy" -l socks5://127.0.0.1:8080#$USERNAME:$PASSWORD -v
 
 
