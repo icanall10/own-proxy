@@ -1,7 +1,5 @@
 #!/bin/bash
 
-git reset --hard && git pull
-
 if ! command -v brew &> /dev/null; then
     echo "Устанавливаем Homebrew"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -17,6 +15,8 @@ if ! command -v git &> /dev/null; then
     echo "Устанавливаем git"
     brew install git
 fi
+
+git reset --hard && git pull
 
 if ! command -v python3 &> /dev/null; then
     echo "Устанавливаем python3"
