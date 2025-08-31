@@ -59,9 +59,6 @@ EOL
 
 
 IP=$(curl -s https://ifconfig.me)
-PORT=8080
-USERNAME=32username
-PASSWORD=password
 
 echo ""
 echo -e "\033[90mip:\033[0m \033[32m$IP\033[0m"
