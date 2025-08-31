@@ -23,10 +23,7 @@ if ! command -v python3 &> /dev/null; then
     brew install python
 fi
 
-if ! command -v pproxy &> /dev/null; then
-    echo "Устанавливаем pproxy"
-    pip3 install pproxy
-fi
+pip3 install pproxy
 
 echo "Запускаем SOCKS5 прокси"
 pproxy -l socks5://USER:PASS@:8080 -v
