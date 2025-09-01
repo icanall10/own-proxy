@@ -90,5 +90,3 @@ echo
 
 "$HOME/Library/Python/3.9/bin/pproxy" -l socks5://:8080#$USERNAME:$PASSWORD -v
 
-
-
