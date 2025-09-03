@@ -38,7 +38,7 @@ if ! command -v pproxy &> /dev/null; then
 fi
 
 
-VERSION=2
+VERSION=3
 echo
 echo -e "\033[90m Версия:\033[0m \033[34m$VERSION\033[0m"
 
@@ -52,8 +52,8 @@ fi
 
 while [ -z "$PORT" ]; do
     echo
-    read -p "Введите порт для прокси [по-умолчанию 8080]: " PORT
-    PORT=${PORT:-8080}
+    read -p "Введите порт для прокси [по-умолчанию 50505]: " PORT
+    PORT=${PORT:-50505}
 done
 
 while [ -z "$USERNAME" ]; do
