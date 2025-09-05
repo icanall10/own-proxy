@@ -7,11 +7,11 @@ def book_schedule():
     body = {
         "is_impromptu_dash": False,
         "ignore_min_shift_duration": False,
-        "dasher": "29310437",
-        "scheduled_start_time": "2025-09-05T20:30:00Z",
-        "scheduled_end_time": "2025-09-05T21:00:00Z",
-        "starting_point": "5105",
-        "vehicle": "31289279"
+        "dasher": "32691131",
+        "scheduled_start_time": "2025-09-02T03:00:00Z",
+        "scheduled_end_time": "2025-09-02T03:30:00Z",
+        "starting_point": "5069",
+        "vehicle": "51410832"
     }
 
     headers = {
@@ -19,20 +19,20 @@ def book_schedule():
         "dd-app-subvariant": "dasher",
         "dd-ids": '{"dd_device_id":"60F881F7-4246-434B-84FF-4E25CBF98545"}',
         "accept": "application/json",
-        "x-session-id": "0d263a19-cd0f-45fa-b012-07b3009c070e-dx-ios",
-        "x-correlation-id": "f7a23a98-d01c-49db-b0c3-44412736223d-dx-ios",
+        "x-session-id": "32F3CACE-71D5-4C2E-A549-4E9417DB8104-dx-ios",
+        "x-correlation-id": "11B287AF-8938-44E3-ABDB-E2581A574282-dx-ios",
         "baggage": "dd-instrumentation.priority=1.0",
-        "x-att-session-id": "BC33B89E-DEFB-4397-9065-118A39BD0C77",
+        "x-att-session-id": "629EA08B-8A72-476C-9A9E-CE955D594B8B",
         "client-version": "ios v2.382.0 b295155",
         "accept-language": "en-US",
         "accept-encoding": "gzip, deflate, br",
         "content-type": "application/json",
-        "x-client-request-id": "e145f220-ca22-4b00-9747-745c2c979d1c-dx-ios",
-        "user-agent": "DoorDashDriver/2.368.0 (iPhone; iOS 18.2.1; Scale/3.0)",
+        "x-client-request-id": "DE26AB14-6437-4A58-8358-046CF8C58D86-dx-ios",
+        "user-agent": "DoorDashDriver/2.382.0 (iPhone; iOS 18.2.1; Scale/3.0)",
         "dd_device_id": "dx_60F881F7-4246-434B-84FF-4E25CBF98545",
         "connection": "keep-alive",
-        "traceparent": "00-3a0fe2a7924b83a44a9dde14968dae72-549367b08e63015d-01",
-        "authorization": "JWT eyJhbGciOiJIUzI1NiJ9.eyJvcmlnX2lhdCI6MTc1NzA5NDY1NiwicGVkcmVnYWwiOnsiaWQiOiJjZmQ5YzU5YS04MDhjLTRhNWMtOGQ2Ni0wN2Q5ZGI5N2RjN2YifSwiZXhwIjoxNzU3MzUzODU2LCJ1c2VyIjp7ImF1dGhfdmVyc2lvbiI6MiwiaXNfc3RhZmYiOmZhbHNlLCJpZCI6MTYwNzI3MDkxOCwiZW1haWwiOiJraXJzYW4ubWFuZHpoaWV2QGdtYWlsLmNvbSJ9LCJjaWQiOjE2NDk0OTI4MTIxNjIzNjEzNjZ9.hFA4YrOEJzI9y3NfvmDVP1KRUkb1kOwKm1BsFBtMaXY"
+        "traceparent": "00-1648567d445d7000414a1f1edfdf9dd9-efa7b5a75c68dae9-01",
+        "authorization": "JWT eyJhbGciOiJIUzI1NiJ9.eyJvcmlnX2lhdCI6MTc1Njc3ODM0NCwicGVkcmVnYWwiOnsiaWQiOiJhMzM4YWUwMC02Y2U3LTRjNjItODU3MS0xODVlY2U2MGQ1YWUifSwiZXhwIjoxNzU3MDM3NTQ0LCJ1c2VyIjp7ImF1dGhfdmVyc2lvbiI6NCwiaXNfc3RhZmYiOmZhbHNlLCJpZCI6MTc2MDQ2MTc4NiwiZW1haWwiOiJhbWFya2hhbm92YTE2QGdtYWlsLmNvbSJ9LCJjaWQiOjE2NDk0OTI4MTIxNjIzNjEzNjZ9.FMpibGeIP4acFG6eqPnU64CVZqVfdLsxuZx6JnkFdr8"
     }
 
     try:

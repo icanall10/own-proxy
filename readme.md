@@ -5,4 +5,4 @@
 
 ### test
 
-`cd /Users/icanall/Desktop/own_proxy && pip install requests && git pull && chmod +x test.py && ./test.py`
+`cd /Users/marat/Desktop/own_proxy && pip3 install requests && git pull && chmod +x test.py && python3 ./test.py`
